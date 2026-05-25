@@ -175,243 +175,7 @@ nav{
   margin-bottom:8px;
   letter-spacing:-2px;
 }
-.stat-label{font-size:12px;color:var(--gray);letter-spacing:1px;text-transform:uppercase;}
-
-/* SECTION */
-section{border-bottom:1px solid var(--border);}
-.sec-inner{padding:100px 48px;}
-.sec-tag{
-  font-size:11px;letter-spacing:3px;color:var(--gold);
-  text-transform:uppercase;margin-bottom:24px;
-  display:flex;align-items:center;gap:12px;
-}
-.sec-tag::before{content:'';width:24px;height:1px;background:var(--gold);}
-.sec-title{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(36px,5vw,64px);
-  font-weight:800;line-height:1;
-  letter-spacing:-1.5px;margin-bottom:64px;
-}
-.sec-title em{font-style:italic;color:var(--gold);font-weight:400;}
-
-/* LEISTUNGEN */
-.services{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1px;background:var(--border);
-}
-.svc{
-  background:var(--black);
-  padding:48px 40px;
-  transition:background .3s;
-  position:relative;overflow:hidden;
-}
-.svc::after{
-  content:'';
-  position:absolute;bottom:0;left:0;right:0;
-  height:2px;background:var(--red);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform .4s ease;
-}
-.svc:hover{background:var(--black3);}
-.svc:hover::after{transform:scaleX(1);}
-.svc-num{
-  font-family:'Syne',sans-serif;font-size:11px;
-  letter-spacing:3px;color:var(--gold);
-  margin-bottom:32px;
-}
-.svc-icon{font-size:32px;margin-bottom:20px;}
-.svc-title{
-  font-family:'Syne',sans-serif;font-size:22px;
-  font-weight:700;margin-bottom:16px;
-}
-.svc-desc{font-size:13px;line-height:1.8;color:var(--gray);}
-.svc-example{
-  margin-top:20px;padding:16px;
-  background:var(--gold-dim);
-  border-left:2px solid var(--gold);
-  font-size:12px;color:var(--gray);line-height:1.7;
-}
-.svc-example strong{color:var(--gold-light);font-size:10px;letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:6px;}
-
-/* PREISE */
-.pricing-grid{
-  display:grid;grid-template-columns:1fr 1.15fr;
-  gap:1px;background:var(--border);
-  max-width:860px;
-}
-.price-card{
-  background:var(--black2);padding:56px 48px;
-  position:relative;
-}
-.price-card.featured{background:var(--black3);}
-.price-badge{
-  position:absolute;top:0;right:0;
-  background:var(--red);color:var(--white);
-  font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  padding:8px 16px;font-weight:700;font-family:'Syne',sans-serif;
-}
-.price-type{
-  font-size:10px;letter-spacing:3px;text-transform:uppercase;
-  color:var(--gold);margin-bottom:20px;
-}
-.price-num{
-  font-family:'Syne',sans-serif;font-size:72px;font-weight:800;
-  line-height:1;letter-spacing:-2px;color:var(--white);
-  margin-bottom:4px;
-}
-.price-num sup{font-size:28px;vertical-align:super;color:var(--gold);}
-.price-note{font-size:12px;color:var(--gray);letter-spacing:1px;margin-bottom:40px;line-height:1.6;}
-.price-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:40px;}
-.price-list li{font-size:13px;color:var(--gray);display:flex;align-items:center;gap:10px;}
-.price-list li::before{content:'—';color:var(--gold);font-size:10px;flex-shrink:0;}
-
-/* FAQ */
-.faq-list{max-width:760px;display:flex;flex-direction:column;gap:0;}
-.faq-item{border-bottom:1px solid var(--border);}
-.faq-q{
-  width:100%;background:none;border:none;
-  color:var(--white);text-align:left;
-  padding:28px 0;cursor:pointer;
-  display:flex;justify-content:space-between;align-items:center;
-  font-family:'Syne',sans-serif;font-size:17px;font-weight:600;
-  gap:20px;transition:color .2s;
-}
-.faq-q:hover{color:var(--gold);}
-.faq-icon{
-  color:var(--gold);font-size:22px;font-weight:300;
-  flex-shrink:0;transition:transform .3s;line-height:1;
-}
-.faq-item.open .faq-icon{transform:rotate(45deg);}
-.faq-a{
-  max-height:0;overflow:hidden;
-  transition:max-height .4s ease,padding .3s;
-  font-size:14px;line-height:1.8;color:var(--gray);
-}
-.faq-item.open .faq-a{max-height:300px;padding-bottom:28px;}
-
-/* KONTAKT */
-.contact-grid{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:80px;align-items:start;
-}
-.contact-details{display:flex;flex-direction:column;gap:24px;margin-top:40px;}
-.contact-item{
-  display:flex;align-items:center;gap:16px;
-  font-size:14px;color:var(--gray);
-}
-.c-icon{
-  width:40px;height:40px;
-  border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:16px;flex-shrink:0;
-  color:var(--gold);
-}
-.contact-form{display:flex;flex-direction:column;gap:20px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.fg{display:flex;flex-direction:column;gap:6px;}
-.fg label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
-.fg input,.fg textarea{
-  background:var(--black2);
-  border:1px solid var(--border);
-  color:var(--white);padding:14px 18px;
-  font-family:'Inter',sans-serif;font-size:13px;font-weight:300;
-  outline:none;transition:border-color .3s;resize:none;
-}
-.fg input:focus,.fg textarea:focus{border-color:var(--gold);}
-.fg textarea{height:110px;}
-
-/* FOOTER */
-footer{
-  padding:32px 48px;
-  display:flex;justify-content:space-between;align-items:center;
-}
-footer p{font-size:11px;color:var(--gray);letter-spacing:1px;}
-footer span{color:var(--gold);}
-
-/* ANIMATIONS */
-.reveal{
-  opacity:0;transform:translateY(32px);
-  transition:opacity .8s ease,transform .8s ease;
-}
-.reveal.visible{opacity:1;transform:translateY(0);}
-
-@media(max-width:768px){
-  nav{padding:16px 24px;}
-  .nav-links{display:none;}
-  .hero{padding:60px 24px 48px;}
-  .stats{grid-template-columns:1fr;border-bottom:none;}
-  .stat{border-right:none;border-bottom:1px solid var(--border);padding:32px 24px;}
-  .sec-inner{padding:64px 24px;}
-  .services{grid-template-columns:1fr;}
-  .pricing-grid{grid-template-columns:1fr;}
-  .contact-grid{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  footer{flex-direction:column;gap:12px;padding:24px;text-align:center;}
-}
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">
-    <div class="logo-mark">MM</div>
-    <div class="logo-text">Mahrous <span>Media</span></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#leistungen">Leistungen</a></li>
-    <li><a href="#preise">Preise</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
-  </ul>
-  <a href="#kontakt" class="nav-cta">Jetzt starten →</a>
-</nav>
-
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker-track">
-    <span>Website in 2 Tagen</span><span class="sep">✦</span>
-    <span>Wendelstein & Landkreis Roth</span><span class="sep">✦</span>
-    <span>Mahrous Media</span><span class="sep">✦</span>
-    <span>Professionell & Günstig</span><span class="sep">✦</span>
-    <span>Mehr Kunden online</span><span class="sep">✦</span>
-    <span>Website in 2 Tagen</span><span class="sep">✦</span>
-    <span>Wendelstein & Landkreis Roth</span><span class="sep">✦</span>
-    <span>Mahrous Media</span><span class="sep">✦</span>
-    <span>Professionell & Günstig</span><span class="sep">✦</span>
-    <span>Mehr Kunden online</span><span class="sep">✦</span>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-label">Webdesign · Region Wendelstein & Roth</div>
-  <h1>Dein Business.<br><em>Dominiert.</em></h1>
-  <p class="hero-sub">Professionelle Websites in 2 Tagen — damit deine Kunden dich online finden, bevor sie zur Konkurrenz gehen.</p>
-  <div class="hero-actions">
-    <a href="#kontakt" class="btn-primary">Kostenlose Demo anfragen →</a>
-    <a href="#leistungen" class="btn-secondary">Mehr erfahren</a>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="stat reveal">
-    <div class="stat-num">2</div>
-    <div class="stat-label">Tage bis zur fertigen Website</div>
-  </div>
-  <div class="stat reveal">
-    <div class="stat-num">0€</div>
-    <div class="stat-label">Kosten für die Demo</div>
-  </div>
-  <div class="stat reveal">
-    <div class="stat-num">100%</div>
-    <div class="stat-label">Lokal aus der Region</div>
-  </div>
-</div>
-
-<!-- LEISTUNGEN -->
+.stat-label{font-size:12px;color:var(--gray);letter-spacing:1px;text-transform:uppercase;}<!-- LEISTUNGEN -->
 <section id="leistungen">
   <div class="sec-inner">
     <div class="sec-tag reveal">Was ich mache</div>
@@ -459,8 +223,9 @@ footer span{color:var(--gold);}
           <li>Google Maps Integration</li>
           <li>DSGVO-konform</li>
         </ul>
-        <a href="#kontakt" class="btn-primary" style="width:100%;justify-content:center;">Anfragen →</a>
+        <a href="https://wa.me/491738743203" class="btn-primary" style="width:100%;justify-content:center;">WhatsApp →</a>
       </div>
+
       <div class="price-card featured reveal">
         <div class="price-badge">Empfohlen</div>
         <div class="price-type">Monatlich</div>
@@ -473,7 +238,7 @@ footer span{color:var(--gold);}
           <li>Unbegrenzte Änderungen</li>
           <li>Persönlicher Ansprechpartner</li>
         </ul>
-        <a href="#kontakt" class="btn-primary" style="width:100%;justify-content:center;">Anfragen →</a>
+        <a href="https://wa.me/491738743203" class="btn-primary" style="width:100%;justify-content:center;">WhatsApp →</a>
       </div>
     </div>
   </div>
@@ -517,15 +282,23 @@ footer span{color:var(--gold);}
         <div class="sec-tag reveal">Jetzt starten</div>
         <h2 class="sec-title reveal" style="margin-bottom:0;">Bereit für<br>deine neue <em>Website?</em></h2>
         <p style="margin-top:24px;font-size:14px;line-height:1.8;color:var(--gray);max-width:380px;" class="reveal">Ich erstelle dir kostenlos und unverbindlich eine Demo — damit du siehst was möglich ist, bevor du dich entscheidest.</p>
+
         <div class="contact-details">
           <div class="contact-item reveal">
             <div class="c-icon">📍</div>
             Region Wendelstein & Landkreis Roth
           </div>
+
           <div class="contact-item reveal">
             <div class="c-icon">📞</div>
-            0173 8743203
+            <a href="tel:01738743203" style="color:var(--gray);text-decoration:none;">0173 8743203</a>
           </div>
+
+          <div class="contact-item reveal">
+            <div class="c-icon">💬</div>
+            <a href="https://wa.me/491738743203" style="color:var(--gold);text-decoration:none;">WhatsApp‑Chat starten</a>
+          </div>
+
           <div class="contact-item reveal">
             <div class="c-icon">✉</div>
             mahroudabdul@gmail.com
@@ -551,8 +324,39 @@ footer span{color:var(--gold);}
 <!-- FOOTER -->
 <footer>
   <p>© 2026 <span>Mahrous Media</span> · Abdul Mahrous · Webdesign Region Roth</p>
-  <p>0173 8743203 · mahroudabdul@gmail.com</p>
+
+  <p>
+    <a href="#" id="openImpressum" style="color:var(--gold);text-decoration:none;margin-right:16px;">Impressum</a>
+    <a href="#" id="openDatenschutz" style="color:var(--gold);text-decoration:none;">Datenschutz</a>
+  </p>
 </footer>
+
+<!-- POPUP: IMPRESSUM -->
+<div id="impressumModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(6px);z-index:999;justify-content:center;align-items:center;">
+  <div style="background:var(--black2);padding:40px;max-width:600px;border:1px solid var(--border);position:relative;">
+    <h2 style="font-family:'Syne';margin-bottom:20px;color:var(--gold);">Impressum</h2>
+    <p style="line-height:1.8;font-size:14px;color:var(--gray);">
+      Abdul Mahrous<br>
+      Mahrous Media<br>
+      Region Wendelstein & Landkreis Roth<br><br>
+      Telefon: 0173 8743203<br>
+      E-Mail: mahroudabdul@gmail.com
+    </p>
+    <button id="closeImpressum" style="margin-top:20px;background:var(--red);color:white;border:none;padding:10px 20px;cursor:pointer;">Schließen</button>
+  </div>
+</div>
+
+<!-- POPUP: DATENSCHUTZ -->
+<div id="datenschutzModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(6px);z-index:999;justify-content:center;align-items:center;">
+  <div style="background:var(--black2);padding:40px;max-width:600px;border:1px solid var(--border);position:relative;">
+    <h2 style="font-family:'Syne';margin-bottom:20px;color:var(--gold);">Datenschutzerklärung</h2>
+    <p style="line-height:1.8;font-size:14px;color:var(--gray);">
+      Deine Daten werden ausschließlich zur Kontaktaufnahme genutzt und nicht an Dritte weitergegeben.
+      Das Kontaktformular wird über Formspree verarbeitet.
+    </p>
+    <button id="closeDatenschutz" style="margin-top:20px;background:var(--red);color:white;border:none;padding:10px 20px;cursor:pointer;">Schließen</button>
+  </div>
+</div>
 
 <script>
 // FAQ
@@ -574,6 +378,18 @@ const obs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// POPUPS
+const impressumModal = document.getElementById("impressumModal");
+const datenschutzModal = document.getElementById("datenschutzModal");
+
+document.getElementById("openImpressum").onclick = () => impressumModal.style.display = "flex";
+document.getElementById("closeImpressum").onclick = () => impressumModal.style.display = "none";
+
+document.getElementById("openDatenschutz").onclick = () => datenschutzModal.style.display = "flex";
+document.getElementById("closeDatenschutz").onclick = () => datenschutzModal.style.display = "none";
 </script>
+
 </body>
 </html>
+
